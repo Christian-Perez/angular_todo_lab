@@ -9,6 +9,14 @@
   </head>
   <body>
     <div ng-controller="TodoController as todoCtrl" >
+      <form>
+        <label>Title</label>
+        <input type="text" ng-model="todoCtrl.newTodo.title">
+        <label>Content</label>
+        <input type="textarea" ng-model="todoCtrl.newTodo.content">
+        <input type="submit" ng-click="todoCtrl.addTodo()">
+      </form>
+
       <ul>
         <li ng-repeat="todo in todoCtrl.todos">
           {{todo.title}}
